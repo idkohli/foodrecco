@@ -11,7 +11,6 @@
     <input type="submit" />
 </form>
 
-<form method="POST" action="">
-    {%  csrf_token %}
+<form method="GET" action="{% url 'index' %}">
     <button>Go Back</button>
 </form>

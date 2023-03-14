@@ -20,15 +20,9 @@ authe = firebase.auth()
 database = firebase.database()
 
 def index(request):
-    if request.method == 'POST' and request.action == 'add':
-        return render(request, 'add.html')
-    elif request.method == 'POST' and request.action == 'recco':
-        return render(request, 'recco.html')
-    else:
-        return render(request, 'index.html')
+    return render(request, 'index.html')
 
 def recco(request):
-
     length = len(database.child('Lunch').get().val()) - 1
     id = random.randint(1, length)
     meal = database.child('Lunch').child(id).child('Name').get().val()
@@ -48,7 +42,7 @@ def add(request):
         database.child('Lunch').child(Id).set(data)
         return render(request, 'add.html')
     else:
-        return render(request, 'index.html')
+        return render(request, 'add.html')
 
 """
 def register(request):

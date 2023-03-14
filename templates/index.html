@@ -1,0 +1,11 @@
+<h1>What should you cook for lunch today?</h1>
+<br>
+<form action="recco" method="post">
+  {%  csrf_token %}
+  <button>Get recommendation</button>
+</form>
+
+<form action="add" method="post">
+  {%  csrf_token %}
+  <button>Add meal option</button>
+</form>

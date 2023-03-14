@@ -1,0 +1,17 @@
+<h1>Add a meal option below.</h1> 
+
+<form method="POST" action="add">
+    {% csrf_token %}
+    <p>Dish Name:</p>
+    <input type="text" name="name" />
+
+    <p>Youtube Recipe Link:</p>
+    <input type="url" name="recipe" /><br><br>
+
+    <input type="submit" />
+</form>
+
+<form method="POST" action="">
+    {%  csrf_token %}
+    <button>Go Back</button>
+</form>

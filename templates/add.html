@@ -1,3 +1,10 @@
+{% load static %}
+<link 
+rel = "stylesheet"
+type = "text/css"
+href = "{% static 'assets/css/bootstrap.css'%}"
+/>
+
 <h1>Add a meal option below.</h1> 
 
 <form method="POST" action="add">
@@ -6,8 +13,12 @@
     <input type="text" name="name" />
 
     <p>Youtube Recipe Link:</p>
-    <input type="url" name="recipe" /><br><br>
+    <input type="url" name="recipe" />
 
+    {% if submit %}
+    <p style="color: chartreuse;">Meal added!</p>
+    {% endif %}
+    <br><br>
     <input type="submit" />
 </form>
 

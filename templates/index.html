@@ -1,3 +1,10 @@
+{% load static %}
+<link 
+rel = "stylesheet"
+type = "text/css"
+href = "{% static 'assets/css/bootstrap.css'%}"
+/>
+
 <h1>What should you cook for lunch today?</h1>
 <br>
 <form action="{% url 'recco' %}" method="get">
